@@ -1,2 +1,2 @@
 #!/bin/bash
-as $CFILE -o "${CFILE::-1}s"
+as -o "${CFILE::-1}s" $CFILE
