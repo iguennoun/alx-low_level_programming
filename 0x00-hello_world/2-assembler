@@ -1,2 +1,2 @@
 #!/bin/bash
-as -o "${CFILE::-1}s" $CFILE
+gcc -c $CFILE -o "${CFILE::-1}s"
