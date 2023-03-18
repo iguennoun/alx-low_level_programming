@@ -7,10 +7,9 @@
 */
 int main(void)
 {
-	int dig;
-	char mychar;
+	char dig, mychar;
 
-	for (dig = 0 ; dig < 10 ; dig++)
+	for (dig = '0' ; dig <= '9'  ; dig++)
 		putchar(dig);
 	for (mychar = 'a' ; mychar <= 'f' ; mychar++)
 		putchar(mychar);
