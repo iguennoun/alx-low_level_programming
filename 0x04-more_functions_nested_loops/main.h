@@ -76,11 +76,7 @@ void print_square(int size);
 */
 void print_triangle(int size);
 
-/**
-** print_number - prints number
-**
-** @n: integer to print to char
+/** 2 Other task to do later;
 */
-void print_number(int n);
 
 #endif
