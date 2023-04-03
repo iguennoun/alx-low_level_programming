@@ -1,4 +1,5 @@
-#include <stddef.h>
+#include <stdio.h>
+
 /**
 ** _strchr - Entry point
 ** @s: string to searsh in
