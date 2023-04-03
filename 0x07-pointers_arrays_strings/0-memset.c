@@ -1,10 +1,10 @@
 /**
-** _memset - fill a block of memory with a specific value
+** _memset - fill a block of memory with a specific char
 ** @s: starting address of memory to be filled
-** @b: the desired value
-** @n: number of bytes to be changed
+** @b: the char to fill with
+** @n: number of bytes to copy
 **
-** Return: changed array with new value for n bytes
+** Return: a pointer to the destianation array
 */
 
 char *_memset(char *s, char b, unsigned int n)
