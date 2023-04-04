@@ -1,4 +1,3 @@
-
 /**
 ** _strspn - length of prefix substring
 ** @s: string to go through
@@ -21,6 +20,8 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
+		if (accept[i] == '\0')
+			return (n);
 		s++;
 	}
 	return (n);
