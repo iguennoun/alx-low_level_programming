@@ -1,5 +1,3 @@
-#include <stddef.h>
-
 /**
 ** _strpbrk - Entry point
 ** @s: input
@@ -20,5 +18,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 		s++;
 	}
-	return (NULL);
+	return ('\0');
 }
