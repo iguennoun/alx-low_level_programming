@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 /**
 ** _strpbrk - Entry point
 ** @s: input
@@ -8,7 +10,7 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int i;
-	
+
 	while (*s)
 	{
 		for (i = 0; accept[i]; i++)
@@ -18,5 +20,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 		s++;
 	}
-	return ('\0');
+	return (NULL);
 }
