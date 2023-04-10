@@ -6,7 +6,7 @@
 ** main - prints the sum of positive numbers in params + '\n'
 ** @argc: Number of the program arguments
 ** @argv: Array of the program arguments
-** Return: EXIT_SUCCESS = 0 if success of EXIT_FAILURE case else
+** Return: EXIT_SUCCESS = 0 if success or EXIT_FAILURE case else
 */
 
 int main(int argc, char **argv)
