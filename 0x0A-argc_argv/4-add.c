@@ -11,30 +11,24 @@
 
 int main(int argc, char **argv)
 {
-	int i, sum;
+	int i, sum = 0;
 
-	sum = 0;
-	if (argc <= 1)
+	while (argc-- > 1)
 	{
-		printf("0\n");
-		exit(EXIT_FAILURE);
-	}
-	else
-	{
-		while (argc-- > 1)
+		(void) *argv++;
+		for (i = 0; (*argv)[i] != '\0'; i++)
 		{
-			(void) *argv++;
-			for (i = 0; (*argv)[i] != '\0'; i++)
+			if (!isdigit((*argv)[i]))
 			{
-				if (!isdigit((*argv)[i]))
-				{
-					printf("Error\n");
-					exit(EXIT_FAILURE);
-				}
+				printf("Error\n");
+				exit(EXIT_FAILURE);
 			}
-			sum += atoi(*argv);
 		}
-		printf("%d\n", sum);
-		exit(EXIT_SUCCESS);
+		sum += atoi(*argv);
 	}
+	printf("%d\n", sum);
+	if (argc <= 1)
+		exit(EXIT_FAILURE);
+	else
+		exit(EXIT_SUCCESS);
 }
