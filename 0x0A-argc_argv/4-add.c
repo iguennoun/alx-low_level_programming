@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 		sum += atoi(*argv);
 	}
 	printf("%d\n", sum);
-	if (argc <= 1)
+	if (argc < 1)
 		exit(EXIT_FAILURE);
 	else
 		exit(EXIT_SUCCESS);
