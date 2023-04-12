@@ -29,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1s2 == NULL)
 		return (NULL);
-	
+
 	s1nbchar = s2nbchar = 0;
 	while (s1[s1nbchar] != '\0')
 	{
@@ -42,6 +42,6 @@ char *str_concat(char *s1, char *s2)
 		s1nbchar++, s2nbchar++;
 	}
 	s1s2[s1nbchar] = '\0';
-	
+
 	return (s1s2);
 }
