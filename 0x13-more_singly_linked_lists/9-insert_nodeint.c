@@ -14,15 +14,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int c;
 	listint_t *new_node, *bucket_node;
 
+	bucket_node = *head;
 	if (idx != 0)
 	{
-		bucket_node = *head;
 		for (c = 0; c < idx - 1 && bucket_node != NULL; c++)
 		{
 			bucket_node = bucket_node->next;
 		}
 	}
-	if (bucket_node == NULL && c >= idx)
+	if (bucket_node == NULL && c != idx)
 		return (NULL);
 
 	new_node = malloc(sizeof(listint_t));
