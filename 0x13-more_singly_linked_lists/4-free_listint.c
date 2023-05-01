@@ -12,8 +12,8 @@ void free_listint(listint_t *head)
 
 	while (head != NULL)
 	{
-		bucket_node = head;
+		bucket_node = head->next;
 		free(head);
-		head = bucket_node->next;
+		head = bucket_node;
 	}
 }
