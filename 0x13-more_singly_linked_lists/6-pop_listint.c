@@ -9,16 +9,18 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *bucket_node;
+	int headnode_n = 0;
 
 	if (*head == NULL)
 	{
-		return (0);
+		(void)bucket_node;
+		return (headnode_n);
 	}
 	else
 	{
-		bucket_node = *head;
+		bucket_node = (*head)->next;
+		headnode_n = (*head)->n;
 		free(*head);
-		*head = bucket_node->next;
-		return (bucket_node->n);
+		return (headnode_n);
 	}
 }
