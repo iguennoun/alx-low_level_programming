@@ -21,6 +21,7 @@ int pop_listint(listint_t **head)
 		bucket_node = (*head)->next;
 		headnode_n = (*head)->n;
 		free(*head);
+		*head = bucket_node;
 		return (headnode_n);
 	}
 }
