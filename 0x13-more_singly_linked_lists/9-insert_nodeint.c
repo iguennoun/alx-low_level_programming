@@ -4,6 +4,7 @@
  * insert_nodeint_at_index - Inserts a new node at a given index
  * @head: The head of the singly linked list
  * @idx: The index of the list where the new node should be added
+ *       NB : It start at 0
  * @n: The value of the new node data (n)
  *
  * Return: The @ of the newly added node, or NULL if it fails
@@ -13,15 +14,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int c;
 	listint_t *new_node, *bucket_node;
 
-	bucket_node = *head;
 	if (idx != 0)
 	{
+		bucket_node = *head;
 		for (c = 0; c < idx - 1 && bucket_node != NULL; c++)
 		{
 			bucket_node = bucket_node->next;
 		}
 	}
-	if (bucket_node == NULL && c != idx)
+	if (bucket_node == NULL && idx != 0)
 		return (NULL);
 
 	new_node = malloc(sizeof(listint_t));
