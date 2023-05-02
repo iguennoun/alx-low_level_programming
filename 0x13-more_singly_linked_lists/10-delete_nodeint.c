@@ -26,7 +26,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	else
 	{
-		while (bucket_node != NULL && i != index - 1)
+		while (bucket_node != NULL && i < index)
 		{
 			bucket_node = bucket_node->next;
 			i++;
