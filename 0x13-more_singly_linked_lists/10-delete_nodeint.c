@@ -31,7 +31,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			bucket_node = bucket_node->next;
 			i++;
 		}
-		if (i != index - 1)
+		if (i < index)
 		{
 			return (-1);
 		}
