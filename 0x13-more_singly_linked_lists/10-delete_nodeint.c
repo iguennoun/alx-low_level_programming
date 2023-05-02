@@ -31,14 +31,16 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			bucket_node = bucket_node->next;
 			i++;
 		}
-		if (i == index)
+		if (i < index)
+		{
+			return (-1);
+		}
+		else
 		{
 			node_todelete = bucket_node->next;
 			bucket_node->next = (bucket_node->next)->next;
 			free(node_todelete);
 			return (1);
 		}
-		else
-			return (-1);
 	}
 }
